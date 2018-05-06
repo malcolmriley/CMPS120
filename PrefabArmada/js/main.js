@@ -9,6 +9,9 @@ function create() {
   // Build a classroom for the teacher - Oakes will do
   game.add.sprite(0, 0, "background");
 
+  // Begin physics, we'll need it
+  game.physics.startSystem(Phaser.Physics.ARCADE);
+
   // Put the teachers in the classroom - maybe 50 will be enough to keep all the ragamuffins in line
   addArmadaSprites(50, "teacher");
 }
@@ -19,6 +22,6 @@ function update() {
 
 function addArmadaSprites(passedQuantity, passedKey) {
   for (var count = 0; count < passedQuantity; count += 1) {
-    new ArmadaSprite(passedKey);
+    var instance = new ArmadaSprite(passedKey);
   }
 }

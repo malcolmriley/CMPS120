@@ -2,6 +2,10 @@ ArmadaSprite = function(imageName) {
   // Call Sprite constructor
   Phaser.Sprite.call(this, game, game.world.randomX, game.world.randomY, imageName);
 
+  // Add [this] to existing game and physics
+  game.physics.arcade.enable(this);
+  game.add.existing(this);
+
   // Define width, height, and velocity randomly
   let scale_width = game.rnd.realInRange(0.25, 2.0);
   let scale_height = game.rnd.realInRange(0.25, 2.0);
@@ -10,9 +14,6 @@ ArmadaSprite = function(imageName) {
   // Set Properties
   this.scale.setTo(scale_width, scale_height);
   this.body.velocity.x = (-1 * velocity_x);
-
-  // Add [this] to existing game
-  game.add.existing(this);
 };
 
 armada_update = function() {
