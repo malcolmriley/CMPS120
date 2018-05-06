@@ -9,11 +9,12 @@ ArmadaSprite = function(imageName) {
   // Define width, height, and velocity randomly
   let scale_width = game.rnd.realInRange(0.25, 2.0);
   let scale_height = game.rnd.realInRange(0.25, 2.0);
-  let velocity_x = game.rnd.between(5, 50);
+  let velocity_x = game.rnd.between(50, 150);
 
   // Set Properties
   this.scale.setTo(scale_width, scale_height);
   this.body.velocity.x = (-1 * velocity_x);
+  this.anchor.setTo(0.5, 0.5);
 };
 
 armada_update = function() {
@@ -23,7 +24,7 @@ armada_update = function() {
   }
 
   // Set wrap padding - distance "beyond" x bounds that wrapping occurs
-  let wrap_padding = 10
+  let wrap_padding = this.width;
 
   // Check and wrap on left side
   if (this.x < (0 - wrap_padding)) {
