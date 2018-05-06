@@ -18,7 +18,7 @@ function update() {
 }
 
 function addArmadaSprites(passedQuantity, passedKey) {
-  for (int count = 0; count < passedQuantity; count += 1) {
+  for (var count = 0; count < passedQuantity; count += 1) {
     new ArmadaSprite(passedKey);
   }
 }
