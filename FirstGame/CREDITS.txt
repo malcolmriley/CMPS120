@@ -1,0 +1,3 @@
+CREDITS: First Game
+
+Sprites - Source Unknown, provided by assignment bootstrap download.

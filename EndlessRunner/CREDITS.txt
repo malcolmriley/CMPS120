@@ -1,0 +1,3 @@
+CREDITS: Endless Runner
+
+All sprites, sounds, etc. - Malcolm Riley
